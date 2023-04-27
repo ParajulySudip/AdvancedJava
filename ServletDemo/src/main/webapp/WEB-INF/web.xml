@@ -4,11 +4,11 @@
         <servlet-name>GetAllItem</servlet-name>
         <servlet-class>backend.GetAllItem</servlet-class>
     </servlet>
-     <servlet>
+    <servlet>
         <servlet-name>DisplayUser</servlet-name>
         <servlet-class>backend.DisplayUser</servlet-class>
     </servlet>
-     <servlet>
+    <servlet>
         <servlet-name>LoginUser</servlet-name>
         <servlet-class>backend.LoginUser</servlet-class>
     </servlet>
@@ -32,12 +32,11 @@
         <servlet-name>GetoneItem</servlet-name>
         <servlet-class>backend.GetOneItem</servlet-class>
     </servlet>
-    
     <servlet>
         <servlet-name>itemsave</servlet-name>
         <servlet-class>backend.itemSave</servlet-class>
     </servlet>
-       <servlet>
+    <servlet>
         <servlet-name>saveuser</servlet-name>
         <servlet-class>backend.SaveUser</servlet-class>
     </servlet>
@@ -45,11 +44,19 @@
         <servlet-name>deleteItem</servlet-name>
         <servlet-class>backend.DeleteItem</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>backend.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PurchaseSave</servlet-name>
+        <servlet-class>backend.PurchaseSave</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetAllItem</servlet-name>
         <url-pattern>/GetAllItem</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>DisplayUser</servlet-name>
         <url-pattern>/DisplayUser</url-pattern>
     </servlet-mapping>
@@ -69,11 +76,11 @@
         <servlet-name>deleteItem</servlet-name>
         <url-pattern>/DeleteItem</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>itemsave</servlet-name>
         <url-pattern>/itemSave</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>LoginUser</servlet-name>
         <url-pattern>/LoginUser</url-pattern>
     </servlet-mapping>
@@ -84,6 +91,14 @@
     <servlet-mapping>
         <servlet-name>SuspendUser</servlet-name>
         <url-pattern>/SuspendUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PurchaseSave</servlet-name>
+        <url-pattern>/PurchaseSave</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

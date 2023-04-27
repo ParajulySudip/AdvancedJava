@@ -25,7 +25,7 @@ public class ActivateUser extends HttpServlet {
         try {
             int id = Integer.parseInt(req.getParameter("id"));
             con = DBConnect.connect();
-            String query = "update tbl_user SET status =? where id = ?";
+            String query = "update tbl_usr SET status =? where id = ?";
             PreparedStatement stmt = con.prepareStatement(query);
             stmt.setString(1, "active");
             stmt.setInt(2, id);
@@ -33,8 +33,11 @@ public class ActivateUser extends HttpServlet {
             
             res.getWriter().println("user activated successfully");
         } catch (ClassNotFoundException ex) {
+            res.getWriter().println(ex.getMessage());
             Logger.getLogger(ActivateUser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
+            
+            res.getWriter().println(ex.getMessage());
             Logger.getLogger(ActivateUser.class.getName()).log(Level.SEVERE, null, ex);
         }
         

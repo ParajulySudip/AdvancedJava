@@ -28,7 +28,7 @@ public class SuspendUser extends HttpServlet {
         try {
             int id = Integer.parseInt(req.getParameter("id"));
             con = DBConnect.connect();
-            String query = "update tbl_user SET status =? WHERE id = ?";
+            String query = "update tbl_usr SET status =? WHERE id = ?";
             PreparedStatement stmt =  con.prepareStatement(query);
             stmt.setString(1, "suspend");
             stmt.setInt(2, id);
@@ -36,6 +36,7 @@ public class SuspendUser extends HttpServlet {
             res.getWriter().println("user suspended successfully");
             
         } catch (ClassNotFoundException ex) {
+            res.getWriter().println(ex.getMessage());
             Logger.getLogger(SuspendUser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(SuspendUser.class.getName()).log(Level.SEVERE, null, ex);

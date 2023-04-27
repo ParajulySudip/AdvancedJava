@@ -26,7 +26,7 @@ Connection con;
         String password = req.getParameter("password");
         String status = "active";
         con = DBConnect.connect();
-        String query = "SELECT * FROM `tbl_user` WHERE username = ? AND password=? AND status = ? ";
+        String query = "SELECT * FROM `tbl_usr` WHERE username = ? AND password=? AND status = ? ";
         PreparedStatement stmt = con.prepareStatement(query);
         stmt.setString(1, username);
         stmt.setString(2, password);
@@ -36,7 +36,7 @@ Connection con;
         if(!result.next()){
             res.getWriter().println("wrong user password");
         }else{
-            res.sendRedirect("frontend/menu.jsp");
+            res.sendRedirect("frontEnd/menu.jsp");
         }
         
         
