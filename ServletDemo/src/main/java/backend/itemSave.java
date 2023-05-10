@@ -4,22 +4,28 @@
  */
 package backend;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.http.Part;
 
 /**
  *
  * @author Shalon
  */
+@MultipartConfig
 public class itemSave extends HttpServlet {
     Connection con;
     @Override
@@ -41,10 +47,16 @@ public class itemSave extends HttpServlet {
         PreparedWay(req, res);
     }
     
-    public void PreparedWay(HttpServletRequest req, HttpServletResponse res){
+    public void PreparedWay(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
         String itemName = req.getParameter("itemName");
         int itemPrice = Integer.parseInt(req.getParameter("itemPrice"));
         try {
+            
+            Part part =req.getPart("photo");
+            String filename=part.getSubmittedFileName();
+            
+            System.out.println(filename);
+            System.out.println("check");
             con = DBConnect.connect();
             String query = "INSERT INTO `tbl_item`(`name`, `price`, `stock`, `photo`) VALUES (?,?,?,?)";
             PreparedStatement stat  = con.prepareStatement(query);
@@ -52,13 +64,28 @@ public class itemSave extends HttpServlet {
             stat.setString(1, itemName);
             stat.setInt(2, itemPrice);
             stat.setInt(3, 0);
-            stat.setString(4, "");
+            stat.setString(4, filename);
+            
+            
+            
+            byte[] data;
+            try ( //uploading photo
+                    InputStream is = part.getInputStream()) {
+                data = new byte[is.available()];
+                is.read(data);
+            }
+            String path = getServletConfig().getServletContext().getRealPath("/")+"frontend"+File.separator+"uploads"+File.separator+filename;
+            System.out.println(path);
+            try (FileOutputStream fileout = new FileOutputStream(path)) {
+                fileout.write(data);
+            }
             
             stat.executeUpdate();
             res.getWriter().println("inserted succesfully");
                     
                     
         } catch (IOException | ClassNotFoundException | SQLException ex) {
+            res.getWriter().println(ex.getMessage());
             System.out.println(ex.getMessage());
         }
         System.out.println(itemName);
@@ -73,7 +100,7 @@ public class itemSave extends HttpServlet {
             String query = String.format("INSERT INTO `tbl_item`(`name`, `price`, `stock`, `photo`) VALUES ('%s', %d,0,'')",itemName,itemPrice);
             Statement stat  = con.createStatement();
             stat.executeUpdate(query);
-            res.getWriter().println("inserted succesfully");
+            res.getWriter().println("inserted succesfully..");
                     
                     
         } catch (IOException | ClassNotFoundException | SQLException ex) {

@@ -52,6 +52,18 @@
         <servlet-name>PurchaseSave</servlet-name>
         <servlet-class>backend.PurchaseSave</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SaveSales</servlet-name>
+        <servlet-class>backend.SaveSales</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetItemSelectBox</servlet-name>
+        <servlet-class>backend.GetItemSelectBox</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetItemForView</servlet-name>
+        <servlet-class>backend.GetItemForView</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetAllItem</servlet-name>
         <url-pattern>/GetAllItem</url-pattern>
@@ -99,6 +111,18 @@
     <servlet-mapping>
         <servlet-name>PurchaseSave</servlet-name>
         <url-pattern>/PurchaseSave</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveSales</servlet-name>
+        <url-pattern>/SaveSales</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetItemSelectBox</servlet-name>
+        <url-pattern>/GetItemSelectBox</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetItemForView</servlet-name>
+        <url-pattern>/GetItemForView</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

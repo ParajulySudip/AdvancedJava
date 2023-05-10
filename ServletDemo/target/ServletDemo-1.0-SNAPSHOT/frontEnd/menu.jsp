@@ -21,19 +21,12 @@
 <div class="menu">
 	<a href="ItemForm.jsp" >Insert Items</a>
 	<a href="DisplayItem.jsp">Display Items</a>
-	<a href="SignUp.jsp" >Signup</a>
+	<a href="SignUp.jsp" >Sign up</a>
         <a href="DisplayUser.jsp">Display User</a>
         <a href="loginForm.jsp" >log in</a>
-        <a href="item_purchase.php">
+        <a href="PurchaseItem.jsp">Purchase</a>
+        <a href="Sales.jsp">Sale</a>
 
-	Purchase</a>
 	
-	<a href="item_sales.php">
-
-	Sale</a>
-
-		<a href="purchase_display.php">Display Purchase Data</a>
-
-	<a href="stock.php">Stock</a>
 
 </div>

@@ -1,6 +1,8 @@
+C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\GetItemSelectBox.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\LoginUser.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\DisplayUser.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\GetOneItem.java
+C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\GetItemForView.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\DBConnect.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\itemSave.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\com\mycompany\servletdemo\JakartaRestConfiguration.java
@@ -9,6 +11,7 @@ C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\com\mycompany
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\Logout.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\servletExample\addServlet.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\servletExample\NewServlet.java
+C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\PurchaseSave.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\HttpServletDemo.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\Servlet.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\servletExample\res.java
@@ -17,3 +20,4 @@ C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\GetAl
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\UpdateItem.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\ActivateUser.java
 C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\SuspendUser.java
+C:\Users\acer\Documents\NetBeansProjects\ServletDemo\src\main\java\backend\SaveSales.java
